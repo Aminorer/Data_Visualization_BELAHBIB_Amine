@@ -62,11 +62,11 @@ st.sidebar.title("Navigation")
 page = st.sidebar.selectbox("Choose a page", ["Portfolio", "Analyse French Museums"])
 
 if page == "Portfolio":
-    st.image('images/EFREI.png', width=170)
+    st.image('EFREI.png', width=170)
     
     col1, col2 = st.columns([1,3])
     with col1:
-        st.image('images/photo_de_profil.png', width=250)
+        st.image('photo_de_profil.png', width=250)
     with col2:
         st.title("Amine BELAHBIB")
         st.write("**Data Science Intern**")
@@ -153,11 +153,11 @@ if page == "Portfolio":
         st.download_button(label="Download PDF", data=file, file_name='CV_Amine_Belahbib.pdf')
 
 elif page == "Analyse French Museums":
-    st.image('images/EFREI.png', width=150)
+    st.image('EFREI.png', width=150)
     
     st.header("Analyze French Museums")
     
-    csv_file = "data/frequentation-musees-fusionne-2001-2018.csv"
+    csv_file = "frequentation-musees-fusionne-2001-2018.csv"
     df = pd.read_csv(csv_file)
     
     st.write("### Data Overview")
