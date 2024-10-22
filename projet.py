@@ -62,11 +62,11 @@ st.sidebar.title("Navigation")
 page = st.sidebar.selectbox("Choose a page", ["Portfolio", "Analyse French Museums"])
 
 if page == "Portfolio":
-    st.image('C:/Users/User/Documents/EFREI/Semestre_7/Data_Visualization/Projet/Images/EFREI.png', width=170)
+    st.image('images/EFREI.png', width=170)
     
     col1, col2 = st.columns([1,3])
     with col1:
-        st.image('C:/Users/User/Documents/EFREI/Semestre_7/Data_Visualization/Projet/Images/photo_de_profil.png', width=250)
+        st.image('images/photo_de_profil.png', width=250)
     with col2:
         st.title("Amine BELAHBIB")
         st.write("**Data Science Intern**")
@@ -148,16 +148,16 @@ if page == "Portfolio":
     
     st.header("Download CV")
     st.write("Click the button below to download the PDF version of my CV.")
-    cv_file_path = "C:/Users/User/Documents/EFREI/Semestre_7/Data_Visualization/Projet/BELAHBIB Amine CV Stage Data Science.pdf"
+    cv_file_path = "BELAHBIB Amine CV Stage Data Science.pdf"
     with open(cv_file_path, 'rb') as file:
         st.download_button(label="Download PDF", data=file, file_name='CV_Amine_Belahbib.pdf')
 
 elif page == "Analyse French Museums":
-    st.image('C:/Users/User/Documents/EFREI/Semestre_7/Data_Visualization/Projet/Images/EFREI.png', width=150)
+    st.image('images/EFREI.png', width=150)
     
     st.header("Analyze French Museums")
     
-    csv_file = "C:/Users/User/Documents/EFREI/Semestre_7/Data_Visualization/Projet/frequentation-musees-fusionne-2001-2018.csv"
+    csv_file = "data/frequentation-musees-fusionne-2001-2018.csv"
     df = pd.read_csv(csv_file)
     
     st.write("### Data Overview")
