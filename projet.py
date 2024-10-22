@@ -2,10 +2,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.express as px
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestRegressor
-from statsmodels.tsa.statespace.sarimax import SARIMAX
-from sklearn.metrics import mean_squared_error
 import plotly.graph_objs as go
 
 # Page configuration
